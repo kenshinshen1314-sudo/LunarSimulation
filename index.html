@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGPU Atmospheric Scattering</title>
+    <style>
+      body { margin: 0; overflow: hidden; background: #000; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      #root { width: 100vw; height: 100vh; }
+      canvas { display: block; width: 100%; height: 100%; outline: none; }
+      .ui-controls {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(15, 23, 42, 0.8);
+        padding: 24px;
+        border-radius: 12px;
+        color: white;
+        width: 280px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .ui-controls h3 { margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;}
+      .control-group {
+        margin-bottom: 20px;
+      }
+      .control-group label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #94a3b8;
+      }
+      input[type=range] {
+        width: 100%;
+        accent-color: #38bdf8;
+      }
+      .hint {
+        font-size: 0.75rem;
+        color: #64748b;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
